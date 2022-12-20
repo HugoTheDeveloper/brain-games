@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "first project which is a braingame. It s developed on python"
+authors = ["bogdan <telioko@tutanota.com>"]
+readme = "README.md"
+packages = [{ include = "brain_games" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.scripts]
+brain-games = "brain_games.scripts.brain_games:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
