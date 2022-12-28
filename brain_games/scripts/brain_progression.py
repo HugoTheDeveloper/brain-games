@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from random import randint, choice
+from random import randint
 import prompt
 from brain_games.cli import welcome_user, name_list
 
@@ -7,7 +7,7 @@ from brain_games.cli import welcome_user, name_list
 def create_progression():
     first_num = randint(5, 10)
     step = randint(2, 7)
-    progression =[]
+    progression = []
     i1 = 1
     while i1 <= step + 4:
         progression.append(first_num + step * i1)
@@ -52,7 +52,7 @@ def guess_absent_num():
 
 
 def main():
-    print('What number is missing in the progression?')
+    print('Welcome to the Brain Games!')
     welcome_user()
     guess_absent_num()
 
