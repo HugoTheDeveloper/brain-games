@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 from random import randint
 import prompt
-from brain_games.cli import welcome_user, name_list
+from brain_games.cli import welcome_user
+from brain_games.scripts.standard_answers import congratulate_user, is_answer_correct
 
 
-def gcd(a, b):
+def find_great_divisor(a, b):
     while a != 0:
         a, b = b % a, a
     return b
@@ -12,21 +13,14 @@ def gcd(a, b):
 
 def guess_greater_divisor():
     print('Find the greatest common divisor of given numbers.')
-    i = 0
-    while i < 3:
+    for i in range(1, 4):
         random_num1 = randint(1, 100)
         random_num2 = randint(1, 50)
         answer = prompt.string(f'Question: {random_num1} {random_num2}\nYour answer: ')
-        correct_answer = str(gcd(random_num1, random_num2))
-        if answer == correct_answer:
-            print('Correct!')
-            i += 1
-        else:
-            print(f"'{answer}' is a wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name_list[0]}!")
+        correct_answer = str(find_great_divisor(random_num1, random_num2))
+        if is_answer_correct(answer, correct_answer):
             break
-        if i == 3:
-            print(f'Congratulations, {name_list[0]}!')
+        congratulate_user(i)
 
 
 def main():

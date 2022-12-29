@@ -5,6 +5,8 @@ description = "first project which is a braingame. It s developed on python"
 authors = ["bogdan <telioko@tutanota.com>"]
 readme = "README.md"
 packages = [{ include = "brain_games" }]
+classifiers = ['Topic :: Software Development - Pycharm Community edition :: Libraries - prompt :: Python Modules - random']
+repository = 'https://github.com/HugoTheDeveloper/python-project-49'
 
 [tool.poetry.dependencies]
 python = "^3.10"

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 from random import randint
 import prompt
-from brain_games.cli import welcome_user, name_list
+from brain_games.cli import welcome_user
+from brain_games.scripts.standard_answers import congratulate_user, is_answer_correct
 
 
 def is_prime(num):
@@ -13,23 +14,16 @@ def is_prime(num):
 
 def guess_is_prime():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    i = 0
-    while i < 3:
+    for i in range(1, 4):
         random_num = randint(1, 60)
         if is_prime(random_num):
             correct_answer = 'yes'
         else:
             correct_answer = 'no'
         answer = prompt.string(f'Question: {random_num}\nYour answer: ')
-        if answer == correct_answer:
-            print('Correct!')
-            i += 1
-        else:
-            print(f"'{answer}' is a wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name_list[0]}!")
+        if is_answer_correct(answer, correct_answer):
             break
-        if i == 3:
-            print(f'Congratulations, {name_list[0]}!')
+        congratulate_user(i)
 
 
 def main():
