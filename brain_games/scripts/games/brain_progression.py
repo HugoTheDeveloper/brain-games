@@ -2,7 +2,8 @@
 from random import randint
 import prompt
 from brain_games.cli import welcome_user
-from brain_games.scripts.standard_answers import is_answer_correct, congratulate_user
+from brain_games.scripts.standard_answers import \
+    is_answer_correct, congratulate_user
 
 
 def create_progression(first_num, step):
@@ -33,7 +34,8 @@ def guess_absent_num():
         correct_answer = str(progression[random_index])
         progression.pop(random_index)
         progression.insert(random_index, '..')
-        answer = prompt.string(f'Question: {transform_lst_to_str(progression)}\nYour answer: ')
+        answer = prompt.string(f'Question: \
+{transform_lst_to_str(progression)}\nYour answer: ')
         if is_answer_correct(answer, correct_answer):
             break
         congratulate_user(i)

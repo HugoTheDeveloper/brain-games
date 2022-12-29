@@ -2,7 +2,8 @@
 from random import randint
 import prompt
 from brain_games.cli import welcome_user
-from brain_games.scripts.standard_answers import congratulate_user, is_answer_correct
+from brain_games.scripts.standard_answers import \
+    congratulate_user, is_answer_correct
 
 
 def find_great_divisor(a, b):
@@ -14,10 +15,10 @@ def find_great_divisor(a, b):
 def guess_greater_divisor():
     print('Find the greatest common divisor of given numbers.')
     for i in range(1, 4):
-        random_num1 = randint(1, 100)
-        random_num2 = randint(1, 50)
-        answer = prompt.string(f'Question: {random_num1} {random_num2}\nYour answer: ')
-        correct_answer = str(find_great_divisor(random_num1, random_num2))
+        num1 = randint(1, 100)
+        num2 = randint(1, 50)
+        answer = prompt.string(f'Question: {num1} {num2}\nYour answer: ')
+        correct_answer = str(find_great_divisor(num1, num2))
         if is_answer_correct(answer, correct_answer):
             break
         congratulate_user(i)

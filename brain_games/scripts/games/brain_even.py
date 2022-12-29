@@ -2,7 +2,8 @@
 from random import randint
 import prompt
 from brain_games.cli import welcome_user
-from brain_games.scripts.standard_answers import congratulate_user, is_answer_correct
+from brain_games.scripts.standard_answers import \
+    congratulate_user, is_answer_correct
 
 
 def is_even_num(num):
