@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 from random import randint
 import prompt
 from brain_games.cli import welcome_user
-from brain_games.scripts.standard_answers import \
+from engine import \
     congratulate_user, is_answer_correct
 
 
@@ -19,7 +18,7 @@ def guess_greater_divisor():
         num2 = randint(1, 50)
         answer = prompt.string(f'Question: {num1} {num2}\nYour answer: ')
         correct_answer = str(find_great_divisor(num1, num2))
-        if is_answer_correct(answer, correct_answer):
+        if not(is_answer_correct(answer, correct_answer)):
             break
         congratulate_user(i)
 

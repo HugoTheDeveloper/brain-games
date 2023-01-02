@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 from random import randint
 import prompt
 from brain_games.cli import welcome_user
-from brain_games.scripts.standard_answers import \
+from engine import \
     is_answer_correct, congratulate_user
 
 
@@ -36,7 +35,7 @@ def guess_absent_num():
         progression.insert(random_index, '..')
         answer = prompt.string(f'Question: \
 {transform_lst_to_str(progression)}\nYour answer: ')
-        if is_answer_correct(answer, correct_answer):
+        if not(is_answer_correct(answer, correct_answer)):
             break
         congratulate_user(i)
 

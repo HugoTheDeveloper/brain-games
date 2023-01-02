@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 from random import randint, choice
 import prompt
 from brain_games.cli import welcome_user
-from brain_games.scripts.standard_answers import \
+from engine import \
     congratulate_user, is_answer_correct
 
 
@@ -25,7 +24,7 @@ def calculate():
         random_operator = choice(operators_list)
         answer = prompt.string(f'Question: {num1} {random_operator} \
 {num2}\nYour answer: ')
-        if is_answer_correct(answer, operate_nums(num1, num2, random_operator)):
+        if not(is_answer_correct(answer, operate_nums(num1, num2, random_operator))):
             break
         congratulate_user(i)
 
