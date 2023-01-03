@@ -21,7 +21,7 @@ def guess_is_prime():
         else:
             correct_answer = 'no'
         answer = prompt.string(f'Question: {random_num}\nYour answer: ')
-        if not(is_answer_correct(answer, correct_answer)):
+        if not (is_answer_correct(answer, correct_answer)):
             break
         congratulate_user(i)
 

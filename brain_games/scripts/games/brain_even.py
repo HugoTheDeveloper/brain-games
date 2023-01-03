@@ -20,7 +20,7 @@ def guess_is_even_num():
         else:
             correct_answer = 'no'
         answer = prompt.string(f'Question: {random_number}\nYour answer: ')
-        if not(is_answer_correct(answer, correct_answer)):
+        if not (is_answer_correct(answer, correct_answer)):
             break
         congratulate_user(i)
 

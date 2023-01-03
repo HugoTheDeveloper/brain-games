@@ -14,15 +14,6 @@ def create_progression(first_num, step):
     return progression
 
 
-def transform_lst_to_str(progression):
-    progression_str = ''
-    i = 0
-    while len(progression) > i:
-        progression_str += ' ' + str(progression[i])
-        i += 1
-    return progression_str.strip()
-
-
 def guess_absent_num():
     print('What number is missing in the progression?')
     for i in range(1, 4):
@@ -34,8 +25,8 @@ def guess_absent_num():
         progression.pop(random_index)
         progression.insert(random_index, '..')
         answer = prompt.string(f'Question: \
-{transform_lst_to_str(progression)}\nYour answer: ')
-        if not(is_answer_correct(answer, correct_answer)):
+{" ".join(progression)}\nYour answer: ')
+        if not (is_answer_correct(answer, correct_answer)):
             break
         congratulate_user(i)
 

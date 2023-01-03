@@ -24,7 +24,7 @@ def calculate():
         random_operator = choice(operators_list)
         answer = prompt.string(f'Question: {num1} {random_operator} \
 {num2}\nYour answer: ')
-        if not(is_answer_correct(answer, operate_nums(num1, num2, random_operator))):
+        if not (is_answer_correct(answer, operate_nums(num1, num2, random_operator))):
             break
         congratulate_user(i)
 
