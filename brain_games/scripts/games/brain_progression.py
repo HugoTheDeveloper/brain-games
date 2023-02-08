@@ -1,8 +1,6 @@
 from random import randint
-import prompt
 from brain_games.cli import welcome_user
-from engine import \
-    is_answer_correct, congratulate_user
+from engine import answer_question
 
 
 def create_progression(first_num, step):
@@ -14,7 +12,7 @@ def create_progression(first_num, step):
     return progression
 
 
-def guess_absent_num():
+def guess_absent_num(username):
     print('What number is missing in the progression?')
     for i in range(1, 4):
         first_num = randint(3, 10)
@@ -24,17 +22,17 @@ def guess_absent_num():
         correct_answer = str(progression[random_index])
         progression.pop(random_index)
         progression.insert(random_index, '..')
-        answer = prompt.string(f'Question: \
-{" ".join(progression)}\nYour answer: ')
-        if not (is_answer_correct(answer, correct_answer)):
+        question = " ".join(progression)
+        if answer_question(question, correct_answer, i, username):
+            continue
+        else:
             break
-        congratulate_user(i)
 
 
 def main():
     print('Welcome to the Brain Games!')
-    welcome_user()
-    guess_absent_num()
+    username = welcome_user()
+    guess_absent_num(username)
 
 
 if __name__ == '__main__':
