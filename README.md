@@ -8,11 +8,6 @@
 ## How to install:
 #### Print in your terminal command:
 >`python3 -m pip install --user git+https://github.com/HugoTheDeveloper/python-project-49.git`
-#### Or
->`git clone git@github.com:HugoTheDeveloper/python-project-49.git`
->`cd python-project-49`
->`cd dist`
->`python3 -m pip install *whl`
 
 #### All the process of installing and demonstration of gameplay is available on clickable sign below.
 [How to install and how it works](https://asciinema.org/a/So2X3Ap60BYAIrmAIr9lYNYXN)
