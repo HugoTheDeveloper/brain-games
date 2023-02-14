@@ -10,10 +10,10 @@
 >`python3 -m pip install --user git+https://github.com/HugoTheDeveloper/python-project-49.git`
 
 #### All the process of installing and demonstration of gameplay is available on clickable sign below.
-[How to install and how it works](https://asciinema.org/a/558656)
+[How to install and how it works](https://asciinema.org/a/pqYX7Lep96GymyBndZ6c8UngA)
 #### Gameplay of each functions on urls below.
-##### [Brain-even demo here](https://asciinema.org/a/tBqTS2nK5yHFg50i5xztgwRSn)
-##### [Brain-calc demo here](https://asciinema.org/a/CjoUtAyBC4jUiDYgd8UdyhbXd)
-##### [Brain-gcd demo here](https://asciinema.org/a/NwLCxuSQv4J3UqBOLUCqkAlxH)
-##### [Brain-progression demo here](https://asciinema.org/a/dYDkLhuCuIBD6bHhTeUULZqBO)
-##### [Brain-prime demo here](https://asciinema.org/a/Y1Cn4aamF8c3omDcXoVP1i9fS)
+##### [Brain-even demo here](https://asciinema.org/a/RF9cgkCURXAjI5ItUpyhSUFKg)
+##### [Brain-calc demo here](https://asciinema.org/a/7mhYQrtsCtBNELI8vHwlsqWWF)
+##### [Brain-gcd demo here](https://asciinema.org/a/MqQHhGICjajLEdnKStDihMMLe)
+##### [Brain-progression demo here](https://asciinema.org/a/jJSKjHGelDBS2VA7xFcRmWEZn)
+##### [Brain-prime demo here](https://asciinema.org/a/jPt1j89ntFduyzG0hGLGcY8bQ)
