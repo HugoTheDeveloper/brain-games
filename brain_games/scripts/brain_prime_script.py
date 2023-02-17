@@ -1,17 +1,14 @@
-from random import randint
+from brain_games.engine import launch_game
+from brain_games.games import brain_prime
 
 
-RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+def guess_is_prime():
+    launch_game(brain_prime)
 
 
-def is_prime(num):
-    for divisor in range(2, num // 2 + 1):
-        if num % divisor == 0:
-            return 'no'
-    return 'yes'
+def main():
+    guess_is_prime()
 
 
-def generate_question_n_answer():
-    random_num = randint(1, 100)
-    correct_answer = is_prime(random_num)
-    return random_num, correct_answer
+if __name__ == '__main__':
+    main()

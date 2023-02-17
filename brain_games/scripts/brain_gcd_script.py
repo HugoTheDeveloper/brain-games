@@ -1,18 +1,14 @@
-from random import randint
+from brain_games.engine import launch_game
+from brain_games.games import brain_gcd
 
 
-RULE = 'Find the greatest common divisor of given numbers.'
+def guess_greater_divisor():
+    launch_game(brain_gcd)
 
 
-def find_great_divisor(a, b):
-    while a != 0:
-        a, b = b % a, a
-    return b
+def main():
+    guess_greater_divisor()
 
 
-def generate_question_n_answer():
-    random_num = randint(1, 100)
-    random_num2 = randint(1, 50)
-    question = f'{random_num} {random_num2}'
-    correct_answer = find_great_divisor(random_num, random_num2)
-    return question, correct_answer
+if __name__ == '__main__':
+    main()

@@ -1,17 +1,14 @@
-from random import randint
+from brain_games.engine import launch_game
+from brain_games.games import brain_even
 
 
-RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
+def guess_is_even_num():
+    launch_game(brain_even)
 
 
-def is_even_num(num):
-    if num % 2 == 0:
-        return 'yes'
-    else:
-        return 'no'
+def main():
+    guess_is_even_num()
 
 
-def generate_question_n_answer():
-    random_num = randint(1, 100)
-    correct_answer = is_even_num(random_num)
-    return random_num, correct_answer
+if __name__ == '__main__':
+    main()

@@ -1,25 +1,14 @@
-from random import randint
+from brain_games.engine import launch_game
+from brain_games.games import brain_progression
 
 
-RULE = 'What number is missing in the progression?'
+def guess_absent_num():
+    launch_game(brain_progression)
 
 
-def create_progression(first_num, step):
-    progression = []
-    i = 1
-    while i <= step + 4:
-        progression.append(str(first_num + step * i))
-        i += 1
-    return progression
+def main():
+    guess_absent_num()
 
 
-def generate_question_n_answer():
-    random_num = randint(3, 10)
-    step = randint(2, 8)
-    progression = create_progression(random_num, step)
-    random_index = randint(1, len(progression) - 2)
-    correct_answer = str(progression[random_index])
-    progression.pop(random_index)
-    progression.insert(random_index, '..')
-    question = " ".join(progression)
-    return question, correct_answer
+if __name__ == '__main__':
+    main()
