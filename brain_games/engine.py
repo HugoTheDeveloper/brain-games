@@ -1,9 +1,10 @@
 import prompt
-from brain_games.scripts.brain_game_script import main as greet
+from brain_games.cli import welcome_user
 
 
 def launch_game(game):
-    username = greet()
+    print('Welcome to the Brain Games!')
+    username = welcome_user()
     print(game.RULE)
     for i in range(1, 4):
         question, correct_answer = \
