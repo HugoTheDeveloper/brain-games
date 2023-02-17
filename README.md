@@ -4,7 +4,7 @@
 ## Minimum requirements:
 #### Availability a computer on *unix operating system
 #### Python3
-#### Pip v20.0 +
+#### Pip v20.0 + 
 ## How to install:
 #### Print in your terminal command:
 >`python3 -m pip install --user git+https://github.com/HugoTheDeveloper/python-project-49.git`
