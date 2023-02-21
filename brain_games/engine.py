@@ -1,10 +1,15 @@
 import prompt
-from brain_games.cli import welcome_user
+
+
+def greet():
+    print('Welcome to the Brain Games!')
+    username = prompt.string('May I have your name? ')
+    print(f'Hello, {username}!')
+    return username
 
 
 def launch_game(game):
-    print('Welcome to the Brain Games!')
-    username = welcome_user()
+    username = greet()
     print(game.RULE)
     for i in range(1, 4):
         question, correct_answer = \
