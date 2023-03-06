@@ -12,6 +12,10 @@ def is_prime(num):
 
 
 def generate_question_n_answer():
+    '''
+    Make random num and check is prime it.
+    :return: question, which is a random num(int), correct answer(str)
+    '''
     random_num = randint(1, 100)
     correct_answer = 'yes' if is_prime(random_num) else 'no'
     return random_num, correct_answer

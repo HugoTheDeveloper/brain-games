@@ -11,6 +11,10 @@ def find_great_divisor(a, b):
 
 
 def generate_question_n_answer():
+    '''
+    Make 2 random nums, calculate great divisor
+    :return: question, which contain two nums as strings(str), correct answer(int)
+    '''
     random_num = randint(1, 100)
     random_num2 = randint(1, 50)
     question = f'{random_num} {random_num2}'
